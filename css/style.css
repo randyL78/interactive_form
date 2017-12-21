@@ -1,4 +1,4 @@
-/* ================================= 
+/* =================================
   Base Element Styles
 ==================================== */
 
@@ -19,7 +19,7 @@ body {
 }
 
 header {
-	text-align: center;  
+	text-align: center;
 }
 
 h1 {
@@ -32,7 +32,7 @@ a {
   text-decoration: none;
 }
 
-/* ================================= 
+/* =================================
   Form Element Styles
 ==================================== */
 
@@ -54,7 +54,7 @@ fieldset {
 
 legend,
 button {
-	font-size: 1.25em;	
+	font-size: 1.25em;
 }
 
 legend {
@@ -78,7 +78,7 @@ label {
 
 input,
 select {
-	margin-bottom: 1.125em;	
+	margin-bottom: 1.125em;
 }
 
 input {
@@ -113,7 +113,7 @@ button:hover {
 	background: #184c62;
 }
 
-/* ================================= 
+/* =================================
   Page Styles
 ==================================== */
 
@@ -135,7 +135,51 @@ button:hover {
 	margin-top: 1.25em;
 }
 
-/* ================================= 
+/* =================================
+  Modal Styles
+==================================== */
+.mdl-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(30, 100, 200, .2);
+	z-index: 200;
+}
+
+.mdl-modal {
+	padding: 25px;
+	position: fixed;
+	border-radius: 20px;
+	top: 25vh;
+	width: 100%;
+	min-height: 200px;
+	transform: translateY(-50px);
+	background-color: #c1deeb;
+	text-align: center;
+	border: 3px solid #184c62;
+	font-size: .75em;
+}
+
+.mdl-modal .warning {
+	background-color: #cd5888;
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 2px 3px 1px #000;
+	font-size: 25px;
+}
+	
+.mdl-modal .success {
+	background-color: #88fda8;
+	color: #fff;
+	text-shadow: 2px 3px 1px #000;
+	text-transform: uppercase;
+	font-size: 25px;
+}
+
+
+/* =================================
   Helper Classes
 ==================================== */
 
@@ -149,7 +193,32 @@ button:hover {
   clear: both;
 }
 
-/* ================================= 
+.hide {
+	display: none;
+}
+
+.disabled {
+	color: #679cb3;
+}
+
+input.valid {
+  border-color: #88fda8;
+}
+
+input.invalid {
+  border-color: #cd5888;
+}
+
+span.valid {
+  color: #88fda8;
+}
+
+span.invalid {
+  color: #cd5888;
+}
+
+
+/* =================================
   Media Queries
 ==================================== */
 
@@ -177,5 +246,12 @@ button:hover {
 	}
 	.col-6 {
 		width: 49%;
+	}
+	.mdl-modal {
+		width: 400px;
+		left: 50vw;
+		transform: translateX(-200px);
+		box-shadow: 0 0 50px 30px #184c62;
+		
 	}
 }
