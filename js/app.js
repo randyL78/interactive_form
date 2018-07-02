@@ -161,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // ------------ functions
     // add validity message span skeleton to labels
     function addSpan(input) {
-      // input.parentElement.insertBefore(document.createElement("span"), input);
       input.previousElementSibling.appendChild(document.createElement("span"));
     }
 
@@ -225,7 +224,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (value.length < startLength || value.length > endlength) return lengthMsg;
         return false;
     }
-
+    /**
+     * Give a form field the "valid" or "invalid" class based on boolean
+     * @param {element} input the form field to apply class styles to
+     * @param {boolean} invalid true means field is not valid
+     */
     function setInvalid(input, invalid) {
       const span = input.previousElementSibling.querySelector("span");
       let msg;
@@ -281,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (msg) {
             displayModal(msg, "warning"); 
         }else{ 
-            displayModal("Message sent", "success"); 
+            displayModal("Registration info sent", "success"); 
         };
 
     };
