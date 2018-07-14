@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 if (label != e.target.parentElement && label.innerText.includes(time)) {
                     label.classList.remove("disabled");
-                    label.firstElementChild.removeAttribute("disabled", "");
+                    label.firstElementChild.removeAttribute("disabled");
                 }
             }
         });
